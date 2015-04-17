@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="black_background" type="color">#000000</item>
+    <item name="text_color_grey_1" type="color">#666666</item>
+    <item name="text_color_grey_2" type="color">#999999</item>
+    <item name="text_color_grey_3" type="color">#CCCCCC</item>
+    <item name="text_color_grey_4" type="color">#FFFFFF</item>
+
+    <item name="text_color_green_1" type="color">#00FF00</item>
+
+</resources>
