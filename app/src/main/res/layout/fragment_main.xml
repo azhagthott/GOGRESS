@@ -37,14 +37,11 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/imageViewUserPhoto"
-            android:src="@mipmap/ic_launcher"
-            android:layout_weight="0"
-            android:layout_gravity="top"
-            android:layout_margin="3dp" />
+        <cl.enlightened.op.dev.gogress.util.CircularImageView
+            android:id="@+id/circularImageView"
+            android:layout_width="@dimen/circular_imageview_width"
+            android:layout_height="@dimen/circular_imageview_height"
+            android:layout_marginBottom="8dp"/>
 
     </LinearLayout>
 
@@ -58,10 +55,11 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
+        android:id="@+id/textViewData"
+        android:text="@string/text_view_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/text_view_data"
-        android:id="@+id/textViewData"
+        android:layout_marginTop="6dp"
         android:layout_below="@+id/linearLayout2"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/buttonCloseApp" />

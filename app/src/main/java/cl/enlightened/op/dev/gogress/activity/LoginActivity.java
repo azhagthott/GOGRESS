@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -18,9 +19,11 @@ import com.google.android.gms.plus.Plus;
 
 import cl.enlightened.op.dev.gogress.R;
 
+
 public class LoginActivity extends Activity implements
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener,OnClickListener{
+        GoogleApiClient.OnConnectionFailedListener,
+        OnClickListener{
 
     public final static boolean DEBUG_MODE=false;
 
@@ -39,7 +42,7 @@ public class LoginActivity extends Activity implements
     private ConnectionResult mConnectionResult;
     private boolean mResolvingError = false;
     private ProgressDialog mProgressDialog;
-
+    public ImageView imageViewGIFLogoApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +56,18 @@ public class LoginActivity extends Activity implements
                 .addOnConnectionFailedListener(this)
                 .build();
 
+        imageViewGIFLogoApp =(ImageView) findViewById(R.id.imageViewGIF);
+
         Log.v(DEBUG_MESSAGE,"onCreate");
 
         mProgressDialog = initializeProgressDialog();
 
         btnSignIn = (SignInButton) findViewById(R.id.sign_in_button);
         btnSignIn.setOnClickListener(this);
+
+
+
+
     }
 
     public static class Action{
@@ -93,6 +102,7 @@ public class LoginActivity extends Activity implements
     protected void onResume() {
         super.onResume();
         Log.v(DEBUG_MESSAGE, "onResume");
+
     }
 
     @Override

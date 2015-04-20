@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="@string/pref_log_out_key"
+        android:title="@string/pref_title_log_out"
+        android:summary="@string/pref_description_log_out"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
+        android:key="@string/pref_revoke_access_key"
+        android:title="@string/pref_title_revoke_access"
+        android:summary="@string/pref_description_revoke_access"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
+        android:key="pref_gif_key"
+        android:title="@string/pref_title_show_gif"
+        android:summary="@string/pref_description_show_gif"
+        android:defaultValue="true" />
+
+</PreferenceScreen>

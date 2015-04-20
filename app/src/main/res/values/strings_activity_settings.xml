@@ -1,0 +1,23 @@
+<resources>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Header-->
+    <string name="pref_header_general">GENERAL</string>
+    <string name="pref_header_session">SESSION</string>
+
+    <!-- Title-->
+    <string name="pref_title_revoke_access">Revoke Access</string>
+    <string name="pref_title_log_out">Log out</string>
+    <string name="pref_title_show_gif">Show GIF</string>
+
+    <!-- Description-->
+    <string name="pref_description_revoke_access">Revoke access</string>
+    <string name="pref_description_log_out">Close session</string>
+    <string name="pref_description_show_gif">Show/Hide GIF on boot</string>
+
+    <!-- Key -->
+    <string name="pref_gif_key" translatable="false">GIF</string>
+    <string name="pref_log_out_key" translatable="false">Log out</string>
+    <string name="pref_revoke_access_key" translatable="false">Revoke access</string>
+
+</resources>

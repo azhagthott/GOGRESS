@@ -1,6 +1,7 @@
 package cl.enlightened.op.dev.gogress.fragment;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -8,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +22,7 @@ import com.google.android.gms.plus.model.people.Person;
 import cl.enlightened.op.dev.gogress.R;
 import cl.enlightened.op.dev.gogress.activity.LoginActivity;
 import cl.enlightened.op.dev.gogress.user.ImageProfile;
+import cl.enlightened.op.dev.gogress.util.CircularImageView;
 
 
 /**
@@ -47,7 +48,7 @@ public class MainFragment extends Fragment implements
 
     public String agentName;
     public String agentEmail;
-    public ImageView imageViewUserPhoto;
+    public CircularImageView circularImageView;
 
 
     private boolean mSignInButtonClicked = false;
@@ -68,7 +69,7 @@ public class MainFragment extends Fragment implements
 
         textViewUserName =(TextView) rootView.findViewById(R.id.textViewUserName);
         textViewEmail = (TextView) rootView.findViewById(R.id.textViewEmail);
-        imageViewUserPhoto = (ImageView) rootView.findViewById(R.id.imageViewUserPhoto);
+        circularImageView =(CircularImageView) rootView.findViewById(R.id.circularImageView);
 
         buttonCloseApp = (Button) rootView.findViewById(R.id.buttonCloseApp);
         buttonCloseApp.setText(R.string.button_text_revoke_access);
@@ -76,7 +77,12 @@ public class MainFragment extends Fragment implements
 
         textViewData = (TextView) rootView.findViewById(R.id.textViewData);
 
-        return rootView;
+
+
+
+
+
+    return rootView;
     }
 
     public void onResume() {
@@ -190,7 +196,9 @@ public class MainFragment extends Fragment implements
                 textViewUserName.setText("Agente: " + agentName);
                 textViewEmail.setText("Email: " + agentEmail);
 
-                new ImageProfile(imageViewUserPhoto).execute(personPhotoUrl);
+                circularImageView.setBorderWidth(6);
+                circularImageView.setBorderColor(Color.LTGRAY);
+                new ImageProfile(circularImageView).execute(personPhotoUrl);
 
             } else {
                 Toast.makeText(getActivity(),
